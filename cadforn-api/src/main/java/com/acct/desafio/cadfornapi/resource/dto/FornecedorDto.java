@@ -12,6 +12,7 @@ import java.sql.Date;
 @Data
 @NoArgsConstructor
 public class FornecedorDto {
+    private Long idEmpresa;
     private int tipoPessoa;
     private String cnpj;
     private String cpf;
