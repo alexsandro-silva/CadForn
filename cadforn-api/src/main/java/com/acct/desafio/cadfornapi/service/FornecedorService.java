@@ -9,9 +9,9 @@ import java.util.List;
 public interface FornecedorService {
 
     Fornecedor cadastrarFornecedor(FornecedorDto fornecedorDto);
-    List<Fornecedor> encontrarFornecedorPorNome(String nome);
-    List<Fornecedor> encontrarFornecedorPorCpf(String cpf);
-    List<Fornecedor> encontrarFornecedorPorCnpj(String cnpj);
+    List<Fornecedor> encontrarFornecedorPorNome(String nome) throws FornecedorNaoEncontradoException;
+    Fornecedor encontrarFornecedorPorCpf(String cpf) throws FornecedorNaoEncontradoException;
+    Fornecedor encontrarFornecedorPorCnpj(String cnpj) throws FornecedorNaoEncontradoException;
     Fornecedor alterarFornecedor(Long id, FornecedorDto fornecedorDto) throws FornecedorNaoEncontradoException;
     void excluirFornecedor(Long id) throws FornecedorNaoEncontradoException;
 }
